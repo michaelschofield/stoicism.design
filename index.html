@@ -93,6 +93,7 @@ p, .link {
     <label class="form__label" for="mce-EMAIL">Your email</label>
     </div>
 
+    <input type="hidden" name="mce-REFERRER" value="">
     <input type="hidden" name="b_552ab950f555406e7dd967eda_a25468faca" tabindex="-1" value="">
 
     <button class="form__button" type="submit">Subscribe</button>
@@ -105,5 +106,14 @@ p, .link {
     <p>This project begins in earnest in January 2019. For the rest of 2018, I am creating a backlog of brief emails to ensure that this is indeed daily, Monday through Friday. Thank you for your interest.</p>
 
     <p><span class="fa fa-twitter"></span> <a class="link" href="https://twitter.com/schoeyfield">Michael Schofield</a></p>
+    
+    <script>
+      const queryParameters = (new URL(document.location)).searchParams;
+      
+      if (queryParameters.has('referrer') === true) {
+        const referrerInput = document.querySelector('#mce-REFERRER');
+        referrerInput.setAttribute('value', queryParameters.get('referrer'));
+      }
+    </script>
   </body>
 </html>
