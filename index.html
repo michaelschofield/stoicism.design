@@ -36,6 +36,8 @@ p, .link {
 .form {
   border: 1px solid #b3aca7;
   display: flex;
+  margin-bottom: 3rem;
+  position: relative;
   transition: all .2s ease-in-out;
 }
 .form__button {
@@ -66,6 +68,17 @@ p, .link {
   position: relative;
   width: 67%;
 }
+      
+.form__group--frequency {
+  bottom: -3rem;
+  position: absolute;
+  width: 100%;
+}
+      .label {
+        color: #685f59;
+        font-size: 80%;
+        font-weight: 700;
+      }
 .form__label {
   color: #685f59;
   left: -75px;
@@ -94,6 +107,11 @@ p, .link {
         <label class="form__label" for="mce-EMAIL">Your email</label>
       </div>
 
+      <div class="form__group--frequency">
+        <input type="radio" value="Daily" name="MMERGE6" id="mce-MMERGE6-0" checked="" class=""><label class="label" for="mce-MMERGE6-0">Daily</label>
+        <input type="radio" value="Weekly" name="MMERGE6" id="mce-MMERGE6-1"><label class="label" for="mce-MMERGE6-1">Weekly</label>
+      </div>
+      
     <input type="hidden" name="REFERRER" id="mce-REFERRER" value="">
     <input type="hidden" name="b_552ab950f555406e7dd967eda_a25468faca" tabindex="-1" value="">
 
